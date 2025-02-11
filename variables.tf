@@ -10,3 +10,11 @@ variable "bucket_names" {
   type    = list(string)
   default = ["dl2-camada-bronze", "dl2-camada-prata", "dl2-camada-ouro"]
 }
+
+variable "glue_databases_names" {
+  description = "Nome do database no AWS Glue"
+  type        = list(string)
+  default     = ["db2-bronze", "db2-prata", "db2-ouro"]
+
+}
+
