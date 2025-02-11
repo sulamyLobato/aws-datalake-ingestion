@@ -18,3 +18,8 @@ variable "glue_databases_names" {
 
 }
 
+variable "glue_role_name" {
+  description = "Nome da role IAM para o AWS Glue"
+  type        = string
+  default     = "GlueServiceRole"
+}
