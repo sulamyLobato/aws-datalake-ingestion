@@ -44,5 +44,5 @@ resource "aws_iam_role" "glue_role" {
 # 📌 Anexar políticas necessárias à Role
 resource "aws_iam_role_policy_attachment" "glue_s3_access" {
   role       = aws_iam_role.glue_role.name
-  policy_arn = "arn:aws:iam::aws:policy/AWSGlueServiceRole"
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole"
 }
