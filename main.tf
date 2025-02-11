@@ -11,3 +11,13 @@ resource "aws_s3_bucket" "datalake" {
     Layer       = var.bucket_names[count.index]
   }
 }
+
+resource "aws_glue_catalog_database" "datalake" {
+  count  = length(var.glue_databases_names)
+  name = var.glue_databases_names[count.index]
+
+  tags = {
+    Environment = "Development"
+    Layer       = var.glue_databases_names[count.index]
+  }
+}
