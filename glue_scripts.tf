@@ -95,5 +95,4 @@ resource "aws_s3_object" "glue_script" {
   bucket = aws_s3_bucket.script_bucket.id
   key    = var.glue_job_cadastro
   source = local_file.glue_pyspark_script.filename
-  etag   = filemd5(local_file.glue_pyspark_script.filename)
 }
