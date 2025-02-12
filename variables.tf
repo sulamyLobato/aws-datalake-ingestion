@@ -5,11 +5,7 @@ variable "aws_region" {
 
 }
 
-variable "bucket_names" {
-  description = "Nomes dos Buckets criados"
-  type    = list(string)
-  default = ["dl2-camada-bronze", "dl2-camada-prata", "dl2-camada-ouro"]
-}
+
 
 variable "glue_databases_names" {
   description = "Nome do database no AWS Glue"
@@ -36,11 +32,6 @@ variable "s3_script_path" {
   default     = "s3://dl-script/tb_bronze_cadastro_usuarios_2.py"
 }
 
-variable "s3_bucket_name" {
-  description = "Nome do bucket S3 onde armazenamos o script"
-  type        = string
-  default     = "dl-script"
-}
 
 variable "s3_output_path" {
   description = "Caminho para salvar os resultados no S3"
