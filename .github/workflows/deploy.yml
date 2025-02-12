@@ -3,7 +3,7 @@ name: Deploy Terraform S3
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   terraform:

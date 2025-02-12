@@ -86,9 +86,9 @@ EOF
 }
 
 # 🚀 Criar o bucket S3 para armazenar o script, caso não exista
-#resource "aws_s3_bucket" "script_bucket" {
- # bucket = var.s3_bucket_name
-#}
+resource "aws_s3_bucket" "script_bucket" {
+  bucket = var.s3_bucket_name
+}
 
 # 🚀 Subir o script PySpark para o S3
 resource "aws_s3_object" "glue_script" {
