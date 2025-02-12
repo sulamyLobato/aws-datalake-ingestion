@@ -1,7 +1,7 @@
 # 🚀 Criar um arquivo local do script PySpark
 
 resource "local_file" "glue_pyspark_script" {
-  filename = "${path.module}/${var.glue_script_name}"
+  filename = "${path.module}/${var.glue_job_cadastro}"
   content  = <<EOF
 
 import sys
